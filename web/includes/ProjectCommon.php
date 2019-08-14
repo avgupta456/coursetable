@@ -84,7 +84,6 @@ class ProjectCommon
             phpCAS::forceAuthentication();
         }
 
-        $netId = null;
         if (phpCAS::isAuthenticated()) {
             $netId = phpCAS::getUser();
         }
