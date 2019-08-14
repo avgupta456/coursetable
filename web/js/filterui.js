@@ -665,6 +665,10 @@ export function TimeFilterUi() {
 
     $weekDayButtons.off('click').on('click', event => {
       const buttonText = $(event.delegateTarget).text();
+<<<<<<< HEAD
+=======
+      console.log(currentFilter);
+>>>>>>> ab715cd710b7f5ae4ea573c04b82cdfc1ec53a04
       let changedWeekDay = false;
       if ('day_of_week' in currentFilter && !currentFilter.day_of_week.includes(buttonText))
       {
@@ -675,6 +679,11 @@ export function TimeFilterUi() {
       }
       
       if (changedWeekDay) {
+<<<<<<< HEAD
+=======
+        console.log(changedWeekDay);
+        console.log(currentFilter);
+>>>>>>> ab715cd710b7f5ae4ea573c04b82cdfc1ec53a04
         if (!('day_of_week' in currentFilter))
         {
           currentFilter.day_of_week = [];

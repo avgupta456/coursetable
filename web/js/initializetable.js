@@ -579,6 +579,10 @@ export default function initializeTableWithData(
     const dayOfWeek = data.day_of_week;
     const direction = data.type; // Before or After
     const filterTime = data.time;
+<<<<<<< HEAD
+=======
+    console.log(data);
+>>>>>>> ab715cd710b7f5ae4ea573c04b82cdfc1ec53a04
     return function(row) {
       const timesByDay = row.times.by_day;
       for (let i = 0; i < data.day_of_week.length; i++)
