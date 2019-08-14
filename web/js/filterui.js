@@ -666,10 +666,7 @@ export function TimeFilterUi() {
     $weekDayButtons.off('click').on('click', event => {
       const buttonText = $(event.delegateTarget).text();
       let changedWeekDay = false;
-      if ('day_of_week' in currentFilter && !currentFilter.day_of_week.includes(buttonText))
-      {
-        changedWeekDay = true;
-      } else if (!('day_of_week' in currentFilter))
+      if ('day_of_week' in currentFilter && !currentFilter.day_of_week.includes(buttonText) || !('day_of_week' in currentFilter))
       {
         changedWeekDay = true;
       }
@@ -679,7 +676,6 @@ export function TimeFilterUi() {
         {
           currentFilter.day_of_week = [];
         }
-        
         currentFilter.day_of_week.push(buttonText);
       }
       tryApplyingCurrentFilter();
@@ -709,7 +705,6 @@ export function TimeFilterUi() {
 
   function findButtonByText($buttons, text) {
     return $buttons.filter(function() {
-      // return $(this).text() === text;
       return text.includes($(this).text());
     });
   }
@@ -819,18 +814,13 @@ export function TimeFilterUi() {
       } else {
         filterToApply = {};
       }
-      
-      letterToDay
-        
-        console.log('filter to apply is' + filterToApply);
-        console.log('filter manager is' + filterManager);
+
         filterToApply.day_of_week = [];
         for (let i = 0; i < currentFilter['day_of_week'].length; i++)
         {
 
           filterToApply.day_of_week.push(letterToDay[currentFilter['day_of_week'][i]]);
         }
-
 
         filterManager.activateFilter(name, filterToApply);
      
@@ -1012,7 +1002,6 @@ export function FilterManager() {
     if (filterName in filterIsExclusive) {
       this.clearAllUsedFilters([filterName]);
     }
-    console.log(filterName);
     if (filterName in filterGenerators) {
       filter = filterGenerators[filterName](filterName, data);
       activeFilters[filterName] = filter;
