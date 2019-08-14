@@ -80,19 +80,13 @@ class ProjectCommon
 
     public static function casAuthenticate($force = true)
     {
-        // if ($force) {
-        //     phpCAS::forceAuthentication();
-        // }
+        if ($force) {
+            phpCAS::forceAuthentication();
+        }
 
-<<<<<<< HEAD
         if (phpCAS::isAuthenticated()) {
             $netId = phpCAS::getUser();
         }
-=======
-        $netId = null;
-        $netId = 'mdl74';
-        
->>>>>>> ab715cd710b7f5ae4ea573c04b82cdfc1ec53a04
 
         return $netId;
     }
