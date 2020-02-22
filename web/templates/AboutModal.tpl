@@ -15,5 +15,6 @@
 	<div class="modal-body">
 		<p><strong>CourseTable</strong> was a project of <a href="http://yaleplus.com/">YalePlus</a> created by <strong>Peter Xu (Yale MC '14) and Harry Yu (Yale SY '14)</strong> and is continuing to be developed by <strong>Yale Computer Society</strong>. It is (as far as we know) the first truly different way to shop for courses.</p>
 		<p>For questions, comments, bug reports, suggestions, or hate mail, please email {foreach $emails as $email}<a href="mailto:{$email}">{$email}</a>{if !$email@last} or {/if}{/foreach}.</p>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSddRsPk0MEXhwVheBof9PT7Qs0Zl7L8X-8r0JLtAato_LgEhw/viewform?embedded=true" width="530" height="275" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 	</div>
 </div>

@@ -217,6 +217,8 @@ for compressibility purposes by tools/build.php
 
 				<ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
 					{include file='SeasonsDropdown.tpl' availableSeasons=$availableSeasons season=$season}
+          <li class="divider"></li>
+          <li class="nav-header">Last updated {$updated}</li>
 					<li>
 						<a tabindex="-1" href="/EnableEvaluations">Enable evaluations</a>
 						<a tabindex="-1" href="/Blog">Events of 2014 Spring</a>
@@ -226,7 +228,7 @@ for compressibility purposes by tools/build.php
 				</ul>
 			</li>
 
-			<li id="nav-about"><a href="#" data-toggle="modal" data-target="#about">Updated {$updated} <i class="icon-question-sign"></i></a></li>
+			<li id="nav-about"><a href="#" data-toggle="modal" data-target="#about">Feedback</a></li>
 		</ul>
 		<ul class="nav pull-right nav-right search-filter">
 			<li>
