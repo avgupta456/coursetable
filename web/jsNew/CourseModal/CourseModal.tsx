@@ -89,12 +89,12 @@ export default class CourseModal extends React.PureComponent<Props> {
     const textbookXML = [
       '<?xml version="1.0" encoding="UTF-8"?><textbookorder><courses>',
       '<course dept="' +
-        firstCode.subject +
-        '" num="' +
-        firstCode.number +
-        '" sect="' +
-        ('0' + firstCode.section).substr(-2) +
-        '" ',
+      firstCode.subject +
+      '" num="' +
+      firstCode.number +
+      '" sect="' +
+      ('0' + firstCode.section).substr(-2) +
+      '" ',
       'term="' + term + '" /></courses></textbookorder>',
     ].join('');
     const textbookLink =
@@ -169,6 +169,10 @@ export default class CourseModal extends React.PureComponent<Props> {
                   <th>Meets</th>
                   <td>{times.long_summary}</td>
                 </tr>
+                <tr>
+                  <th>Cross Listed As</th>
+                  <td>Wowza</td>
+                </tr>
                 {flags.length !== 0 && (
                   <tr>
                     <th>Notes</th>
@@ -230,10 +234,10 @@ export default class CourseModal extends React.PureComponent<Props> {
                         ))}
                       </>
                     ) : (
-                      <a className="btn" href="/UpdateCoursesTaken">
-                        See which friends have taken this
+                        <a className="btn" href="/UpdateCoursesTaken">
+                          See which friends have taken this
                       </a>
-                    )}
+                      )}
                   </td>
                 </tr>
               </table>
